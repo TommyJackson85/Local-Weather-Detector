@@ -76,7 +76,7 @@ $.getJSON(api, function(weath) {
   /*Now to change colors of web page in relation to certain arrays of icons (from the api)*/
  var iconIndex = {
   clear: ["01d"].indexOf(weath.weather[0].icon),
-  cloud: ["03d", "04d", "50d"].indexOf(weath.weather[0].icon), //includes mist
+  cloud: ["01d","03d", "04d", "50d"].indexOf(weath.weather[0].icon), //includes mist
   cloudClear: ["02d"].indexOf(weath.weather[0].icon),
   rain: ["09d", "10d"].indexOf(weath.weather[0].icon),
   thunder:  ["11d"].indexOf(weath.weather[0].icon),

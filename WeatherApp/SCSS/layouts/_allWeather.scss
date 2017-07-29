@@ -1,8 +1,11 @@
 
 #allWeather {
-  margin: 2% 2% 0% 2%;
-  padding: 2% 2% 0% 2%;
+  margin: 2% 4% 0% 2%;
+  padding: 2% 2% 0% 4%;
  background: grey;
   color: black;
-  max-width: 500px;
+  	p, h6 {
+  	font-size: 13px;
+  }
 }
+
