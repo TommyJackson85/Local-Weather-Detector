@@ -1,46 +1,23 @@
 $(document).ready(function() {
-
   var ip = "http://ip-api.com/json";
   console.log(ip);
-  var lat;
-  var long;
   var apiKey = "&appid=4375088c0dfb70bc8bf2c452aede24f5";
-  var city = '<h3 id="locData">%data%, ';
-  var country = '%data%</h3>';
-  var celsius = "%data% &#8451;";
-  var fahrenheit = "%data% &#8457;";
-  var icon = '<h6><img src="https://openweathermap.org/img/w/%data%.png" alt="" style="">';
-  var mainDesc = '(%data%)</h6>';
-
-  var header = document.getElementById("header");
-  var body = document.getElementById("background");
-  var box = document.getElementById("allWeather");
-  var temp = document.getElementById("tempSwap");
-  
   //gets location of User through IP address
-  $.getJSON(ip, function(loc) {
-    lat = loc.lat;
-    long = loc.lon;
-    city = city.replace('%data%', loc.city);
-    country = country.replace('%data%', loc.country);
-    var location = city + country;
+  $.getJSON(ip, function(loc) {  
+    var location = '<h3 id="locData">' + loc.city + ', ' + loc.country + '</h3>';
+    console.log(location);
     $('#location').append(location);
-
     //using lat and lon from IP + WeatherAPI to get Weather Forecast... 
-    var api = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + "&units=metric" + apiKey;
-    //copy link from Console to check in browser
+    var api = "http://api.openweathermap.org/data/2.5/weather?lat=" + loc.lat + "&lon=" + loc.lon + "&units=metric" + apiKey;
     console.log(api);
-    
     //Creating Button that toggles between Celsius and Fahrenheit using true or false arguments of a separated variable (tempSwap)
     $.getJSON(api, function(celsData) {
-      // Sets celsius as fefult and rounds it nearest number;
+      // Sets celsius as defult and rounds it nearest number;
       var celsCalc = Math.round(celsData.main.temp);
-      celsius = celsius.replace('%data%', celsCalc);
-      
+      var celsius = celsCalc + "&#8451;";
       // calculates celsius as fahrenheit and rounds to nearesy number;
       var fahrCalc = Math.round((celsData.main.temp * 9 / 5) + 32);
-      fahrenheit = fahrenheit.replace('%data%', fahrCalc);
-      
+      var fahrenheit = fahrCalc + '&#8457;';                
       //button default is fahrenheit so fahrenheit is set as true vvvv
       var tempSwap = true;
       $('#tempSwap').html(fahrenheit);
@@ -54,22 +31,17 @@ $(document).ready(function() {
           $('#tempSwap').html(fahrenheit);
           tempSwap = true;
         }
-      });
-      
-      
+      });      
 $.getJSON(api, function(weath) {
-  //icon for weather summary
-  icon = icon.replace("%data%", weath.weather[0]['icon']);
-  
   // Now for the description but FIRST capitalises first letter of each word so it looks nicer
   var descStr = weath.weather[0]['description'].toLowerCase().split(' ');
    for (var i = 0; i < descStr.length; i++) {   
        descStr[i] = descStr[i].charAt(0).toUpperCase() + descStr[i].substring(1);     
    };
    descStr = descStr.join(' ');
-  
-  mainDesc = mainDesc.replace("%data%", descStr);
-  var weather = icon + mainDesc;
+
+var weather =  '<h6><img src="https://openweathermap.org/img/w/' + weath.weather[0]['icon'] + '.png" alt="" style="">('+ descStr +')</h6>';
+
   console.log(weather);
   $("#weather").append(weather);
   //description finished and appended
@@ -88,6 +60,12 @@ $.getJSON(api, function(weath) {
   thunderNight: ["11n"].indexOf(weath.weather[0].icon),
   snowNight: ["13n"].indexOf(weath.weather[0].icon),
 }
+
+var header = document.getElementById("header");
+var body = document.getElementById("background");
+var box = document.getElementById("allWeather");
+var temp = document.getElementById("tempSwap");
+
   //var wth = "thNi"; //*Only use the wth variable to test each weather icon array (untag the test arguments below, and tag out the api based arguments -- untag and change the previous wth variable to check each array )*
   if /*(wth === "cl")*/(iconIndex.clear >= 0){
 body.setAttribute("style", "color: #f1c40f; background: #3498db;");        
