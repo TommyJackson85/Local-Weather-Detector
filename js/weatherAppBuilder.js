@@ -3,13 +3,15 @@ $(document).ready(function() {
   //console.log(ip);
   var apiKey = "&appid=4375088c0dfb70bc8bf2c452aede24f5";
   //gets location of User through IP address
+var latitude = "-33.8814";
+var longitude = "151.18";
 
   var coloring = function(id, Text, Background) {
     var colorChange = "color: " + Text + "; background: " + Background + ";";
     document.getElementById(id).setAttribute("style", colorChange);
   };// function used to change the color of web page in relation to the weather 'icon'
   
-  $.getJSON(ip, function(loc) {
+  //$.getJSON(ip, function(loc) {
     var location =
       '<h3 id="locData">' + loc.city + ", " + loc.country + "</h3>";
     console.log(location);
@@ -17,9 +19,9 @@ $(document).ready(function() {
     //using lat and lon from IP + WeatherAPI to get Weather Forecast...
     var api =
       "https://api.openweathermap.org/data/2.5/weather?lat=" +
-      loc.lat +
+      latitude +
       "&lon=" +
-      loc.lon +
+      longitude +
       "&units=metric" +
       apiKey;
     console.log(api);
@@ -143,5 +145,5 @@ $(document).ready(function() {
         }
       });
     });
-  });
+  //});
 });
