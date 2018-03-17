@@ -16,7 +16,7 @@ $(document).ready(function() {
     $("#location").append(location);
     //using lat and lon from IP + WeatherAPI to get Weather Forecast...
     var api =
-      "http://api.openweathermap.org/data/2.5/weather?lat=" +
+      "https://api.openweathermap.org/data/2.5/weather?lat=" +
       loc.lat +
       "&lon=" +
       loc.lon +
