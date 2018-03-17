@@ -13,7 +13,7 @@ var longitude = "151.18";
   
   //$.getJSON(ip, function(loc) {
     var location =
-      '<h3 id="locData">' + Sydney + ", " + NSW, Australia + "</h3>";
+      '<h3 id="locData"> Sydney, NSW, Australia </h3>';
     console.log(location);
     $("#location").append(location);
     //using lat and lon from IP + WeatherAPI to get Weather Forecast...
