@@ -11,11 +11,16 @@ var longitude = "151.18";
     document.getElementById(id).setAttribute("style", colorChange);
   };// function used to change the color of web page in relation to the weather 'icon'
   
-  //$.getJSON(ip, function(loc) {
+
+  /*getJSON from ip api had been tagged out because,
+  it doesn't work as a live page, due to security issues.
+  I'm onsidering options to use it again so it will remain in place*/
+  /*$.getJSON(ip, function(loc) {
     var location =
       '<h3 id="locData"> Sydney, NSW, Australia </h3>';
     console.log(location);
-    $("#location").append(location);
+    $("#location").append(location);*/
+
     //using lat and lon from IP + WeatherAPI to get Weather Forecast...
     var api =
       "https://api.openweathermap.org/data/2.5/weather?lat=" +
