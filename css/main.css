@@ -1,1 +1,311 @@
-body{font-size:10px;margin:0;padding:0}#box{margin:2% 4% 0% 2%;padding:2% 2% 0% 4%;background:grey;color:black}#box p,#box h6{font-size:13px}#background{color:grey;background:black}#copywrite{margin:10% 2% 0% 0%;padding:2% 4% 0% 0%}#copywrite h6{font-size:13px}#header{margin:25% 0% 5% 12%}#header h1{font-size:36px}#location{margin:0px 0px 30px 10%}#location h5{font-size:13px}#location h3{font-size:20px}#location #locIntro{margin:2% 0% 0% 9%}#location #locData{margin:0.5% 0% 2% 11%}#temperature #tempSwap{background:black;color:white}@media (min-width: 360px){#header{margin:27% 0% 7% 12%}#header h1{font-size:4.05em}#location h5{font-size:1.5em}#location h3{font-size:2em}#box{margin:5% 2% 0% 2%}#box p,#box h6{font-size:1.5em}#copywrite h6{font-size:1.5em}}@media (min-width: 412px){#header{margin:27% 0% 7% 12%}#header h1{font-size:4.6em}#location h5{font-size:1.7em}#location h3{font-size:2.5em}#box{margin:5% 2% 0% 2%}#box p,#box h6{font-size:1.7em}#copywrite h6{font-size:1.7em}}@media (min-width: 412px) and (min-width: 568px){#header{margin:27% 0% 7% 12%}#header h1{font-size:4.6em}#location h5{font-size:2.1em}#location h3{font-size:3.2em}#box{margin:5% 5% 0% 5%}#box p,#box h6{font-size:2.1em}#box p img,#box h6 img{width:80px}#copywrite{margin:10px 10px 27% 20px}#copywrite h6{font-size:2.1em}}@media (min-width: 412px) and (min-width: 640px){#header{margin:27% 0% 7% 12%}#header h1{font-size:5.6em}#location h5{font-size:2.3em}#location h3{font-size:3.5em}#box{margin:5% 5% 0% 5%}#box p,#box h6{font-size:2.3em}#box img{width:80px}#copywrite{margin:10px 10px 27% 20px}#copywrite h6{font-size:2.3em}}@media (min-width: 412px) and (min-width: 732px){#header{margin:27% 0% 7% 12%}#header h1{font-size:8.2em}#location h5{font-size:2.8em}#location h3{font-size:4.5em}#box{width:648px;margin:5% 5% 0% 5%}#box p,#box h6{font-size:2.8em}#box img{width:80px}#copywrite{margin:10px 10px 27% 20px}#copywrite h6{font-size:2.8em}}@media (min-width: 412px) and (min-width: 768px){#header{margin:20% 0% 0% 13%}#location{margin:5% 0% 0% 13%}#box{margin:5% 0% 0% 7%}}@media (min-width: 412px){#copywrite{margin:10px 0px 27% 8%}}@media (min-width: 412px) and (min-width: 1024px){#header{margin:17% 0% 0% 13%}#location{margin:5% 0% 0% 13%}#box{margin:5% 0% 0% 18%;padding:2% 2% 0% 2%}#copywrite{margin:10px 0px 27% 18%}}
+/* 
+	Resume Bootstrap Sass Theme
+	Author: Tommy Jackson
+	Version
+*/
+/*
+BASE - Base Styles, Variable, mixins, etc 
+*/
+/*body {*/
+/* line 2, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/base/_base.scss */
+body {
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+/* LAYOUTS - Page layout styles */
+/* line 2, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_weatherBox.scss */
+#box {
+  margin: 2% 4% 0% 2%;
+  padding: 2% 2% 0% 4%;
+  background: grey;
+  color: black;
+}
+
+/* line 7, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_weatherBox.scss */
+#box p, #box h6 {
+  font-size: 13px;
+}
+
+/* line 2, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_background.scss */
+#background {
+  color: grey;
+  background: black;
+}
+
+/* line 1, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_copywrite.scss */
+#copywrite {
+  margin: 10% 2% 0% 0%;
+  padding: 2% 4% 0% 0%;
+}
+
+/* line 2, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_copywrite.scss */
+#copywrite h6 {
+  font-size: 13px;
+}
+
+/* line 1, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_header.scss */
+#header {
+  margin: 25% 0% 5% 12%;
+}
+
+/* line 2, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_header.scss */
+#header h1 {
+  font-size: 36px;
+}
+
+/* line 1, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_location.scss */
+#location {
+  margin: 0px 0px 30px 10%;
+}
+
+/* line 3, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_location.scss */
+#location h5 {
+  font-size: 13px;
+}
+
+/* line 6, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_location.scss */
+#location h3 {
+  font-size: 20px;
+}
+
+/* line 11, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_location.scss */
+#location #locIntro {
+  margin: 2% 0% 0% 9%;
+}
+
+/* line 13, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_location.scss */
+#location #locData {
+  margin: 0.5% 0% 2% 11%;
+}
+
+/* line 2, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_temperature.scss */
+#temperature #tempSwap {
+  background: black;
+  color: white;
+}
+
+@media (min-width: 360px) {
+  /* line 2, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #header {
+    margin: 27% 0% 7% 12%;
+  }
+  /* line 4, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #header h1 {
+    font-size: 4.05em;
+  }
+  /* line 9, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #location h5 {
+    font-size: 1.5em;
+  }
+  /* line 12, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #location h3 {
+    font-size: 2em;
+  }
+  /* line 15, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #box {
+    margin: 5% 2% 0% 2%;
+  }
+  /* line 17, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #box p, #box h6 {
+    font-size: 1.5em;
+  }
+  /* line 21, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #copywrite h6 {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 412px) {
+  /* line 24, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #header {
+    margin: 27% 0% 7% 12%;
+  }
+  /* line 26, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #header h1 {
+    font-size: 4.6em;
+  }
+  /* line 31, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #location h5 {
+    font-size: 1.7em;
+  }
+  /* line 34, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #location h3 {
+    font-size: 2.5em;
+  }
+  /* line 38, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #box {
+    margin: 5% 2% 0% 2%;
+  }
+  /* line 40, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #box p, #box h6 {
+    font-size: 1.7em;
+  }
+  /* line 45, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #copywrite h6 {
+    font-size: 1.7em;
+  }
+}
+
+@media (min-width: 412px) and (min-width: 568px) {
+  /* line 48, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #header {
+    margin: 27% 0% 7% 12%;
+  }
+  /* line 50, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #header h1 {
+    font-size: 4.6em;
+  }
+  /* line 55, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #location h5 {
+    font-size: 2.1em;
+  }
+  /* line 58, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #location h3 {
+    font-size: 3.2em;
+  }
+  /* line 62, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #box {
+    margin: 5% 5% 0% 5%;
+  }
+  /* line 64, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #box p, #box h6 {
+    font-size: 2.1em;
+  }
+  /* line 66, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #box p img, #box h6 img {
+    width: 80px;
+  }
+  /* line 69, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #copywrite {
+    margin: 10px 10px 27% 20px;
+  }
+  /* line 71, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #copywrite h6 {
+    font-size: 2.1em;
+  }
+}
+
+@media (min-width: 412px) and (min-width: 640px) {
+  /* line 74, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #header {
+    margin: 27% 0% 7% 12%;
+  }
+  /* line 76, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #header h1 {
+    font-size: 5.6em;
+  }
+  /* line 80, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #location h5 {
+    font-size: 2.3em;
+  }
+  /* line 83, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #location h3 {
+    font-size: 3.5em;
+  }
+  /* line 86, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #box {
+    margin: 5% 5% 0% 5%;
+  }
+  /* line 88, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #box p, #box h6 {
+    font-size: 2.3em;
+  }
+  /* line 90, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #box img {
+    width: 80px;
+  }
+  /* line 93, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #copywrite {
+    margin: 10px 10px 27% 20px;
+  }
+  /* line 95, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #copywrite h6 {
+    font-size: 2.3em;
+  }
+}
+
+@media (min-width: 412px) and (min-width: 732px) {
+  /* line 98, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #header {
+    margin: 27% 0% 7% 12%;
+  }
+  /* line 100, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #header h1 {
+    font-size: 8.2em;
+  }
+  /* line 105, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #location h5 {
+    font-size: 2.8em;
+  }
+  /* line 108, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #location h3 {
+    font-size: 4.5em;
+  }
+  /* line 111, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #box {
+    width: 648px;
+    margin: 5% 5% 0% 5%;
+  }
+  /* line 114, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #box p, #box h6 {
+    font-size: 2.8em;
+  }
+  /* line 116, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #box img {
+    width: 80px;
+  }
+  /* line 120, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #copywrite {
+    margin: 10px 10px 27% 20px;
+  }
+  /* line 122, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #copywrite h6 {
+    font-size: 2.8em;
+  }
+}
+
+@media (min-width: 412px) and (min-width: 768px) {
+  /* line 126, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #header {
+    margin: 20% 0% 0% 13%;
+  }
+  /* line 129, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #location {
+    margin: 5% 0% 0% 13%;
+  }
+  /* line 132, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #box {
+    margin: 5% 0% 0% 7%;
+  }
+}
+
+@media (min-width: 412px) {
+  /* line 135, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #copywrite {
+    margin: 10px 0px 27% 8%;
+  }
+}
+
+@media (min-width: 412px) and (min-width: 1024px) {
+  /* line 139, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #header {
+    margin: 17% 0% 0% 13%;
+  }
+  /* line 142, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #location {
+    margin: 5% 0% 0% 13%;
+  }
+  /* line 145, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #box {
+    margin: 5% 0% 0% 18%;
+    padding: 2% 2% 0% 2%;
+  }
+  /* line 149, /Users/thomasjackson/Desktop/Projects/templateWeatherApp/SCSS/layouts/_mediaQueries.scss */
+  #copywrite {
+    margin: 10px 0px 27% 18%;
+  }
+}
+
+/*# sourceMappingURL=../css/main.map */
